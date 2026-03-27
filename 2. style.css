@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Iosevka Charon", monospace;
+    outline: none;
+}
+
+body{
+    background: rgba(255, 255, 255, 0.603);
+    background-image: url(./Assets/img.hourglass.jpg);
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: right bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.container-stopwatch{
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.title{
+    color: black;
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.display{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.container-btns{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none; 
+    width: 90px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+.btn-start{
+    background-color: rgb(4, 255, 0);
+    color: black;
+}
+
+.btn-stop{
+    background-color: red;
+    color: white;
+}
+
+.btn-restart{
+    background-color: blue;
+    color: white;
+}
+
+button:hover{
+    opacity: 0.7;
+    transform: scale(1.12);
+}
+
+button:active{
+    transform: scale(0.92);
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: -60px;  
+}
+
+.logo-dev{
+    width: 110px;
+    height: auto;
+}
