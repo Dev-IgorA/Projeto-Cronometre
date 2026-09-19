@@ -1,9 +1,9 @@
 // Mapeamento - Seleção dos elementos - botões
 
-const display = document.querySelector(".display");
-const startBtn = document.querySelector(".btn-start");
-const stopBtn = document.querySelector(".btn-stop");
-const restartBtn = document.querySelector(".btn-restart");
+const display = document.querySelector('.display');
+const startBtn = document.querySelector('.btn-start');
+const stopBtn = document.querySelector('.btn-stop');
+const restartBtn = document.querySelector('.btn-restart');
 
 // Variáveis de estado
 // Variável criada para iniciar com o valor "0"
@@ -18,7 +18,7 @@ function formatTime(totalCentiseconds) {
   const cents = totalCentiseconds % 100;
 
   //Formatação "padStart" garante que sempre tenha 2 dígitos (Ex.: 01 em vez de 1)
-  const format = (unit) => String(unit).padStart(2, "0");
+  const format = (unit) => String(unit).padStart(2, '0');
   return `${format(mins)}:${format(secs)}:${format(cents)}`;
 }
 // Funções Lógicas
@@ -37,7 +37,7 @@ function startTimer() {
 }
 
 function stopTimer() {
-  clearInterval(timerInterval); //Para o temporizador
+  clearInterval(timerInterval); //Parar o temporizador
   timerInterval = null; // Libera "limpa a variável" para iniciar novamente
   startBtn.disabled = false; // Reativa o botão de Iniciar
 }
@@ -45,10 +45,10 @@ function stopTimer() {
 function resetTimer() {
   stopTimer(); // Para o cronômetro e reativa o botão iniciar
   centiseconds = 0;
-  display.textContent = "00:00.00";
+  display.textContent = '00:00.00';
 }
 
 // Event Listeners - Eventos de click
-startBtn.addEventListener("click", startTimer);
-stopBtn.addEventListener("click", stopTimer);
-restartBtn.addEventListener("click", resetTimer);
+startBtn.addEventListener('click', startTimer);
+stopBtn.addEventListener('click', stopTimer);
+restartBtn.addEventListener('click', resetTimer);
